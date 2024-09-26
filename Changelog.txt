@@ -1,0 +1,10 @@
+Changelog for Prototype Project:
+
+26/09/2024:
+I was supposed to create this changelog file last week after my meeting with the supervisor but forgot.
+
+Was sick as a dog this week and have not been able to do much at all so will need to play catch-up over the weekend.
+
+So, changes to plan! I will take supervisor feedback into consideration and not implement chat mechanics at this stage. Focus instead of just creating 'game mode teleporting zones'
+
+Achieved so far: I've been able to make meshes in Blender, and import them into Godot. It was pretty painless and easy. That said: I need to figure out materials and textures, because this looks really bad. Usually completely black. I have technically got a hub. No camera following, and the hub is more of a diorama currently. Collisions are acting weird. Need to figure out how to properly work collisions into Godot from Blender meshes as currently players cannot walk on them.

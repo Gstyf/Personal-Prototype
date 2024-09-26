@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://dltqep85ntqcf"]
+
+[ext_resource type="PackedScene" uid="uid://xfg781k0aqf7" path="res://Models/Tavern.blend" id="1_75m3b"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_0hs4l"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2kx2o"]
+size = Vector3(2.63886, 0.0930176, 2.87354)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q0uak"]
+size = Vector3(5.04871, 0.484863, 7.12939)
+
+[node name="Tavern" type="StaticBody3D"]
+
+[node name="Tavern" parent="." instance=ExtResource("1_75m3b")]
+
+[node name="FloorCollision" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.974506, 0, 0, 0, 0.999964, 0, 0, 0, 1.09072, 0, 0.117538, -0.0661266)
+shape = SubResource("WorldBoundaryShape3D_0hs4l")
+
+[node name="Stairs" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.92751, 0.373797, 0, -0.373797, 0.92751, -3.04531, 0.634324, 6.89699)
+shape = SubResource("BoxShape3D_2kx2o")
+
+[node name="Stairs2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.04576, 1.07934, 9.47383)
+shape = SubResource("BoxShape3D_2kx2o")
+
+[node name="Landing" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.01375, 0.957758, 6.90244)
+shape = SubResource("BoxShape3D_q0uak")
