@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://28yg82c3wv0u"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_yypag"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_53swc"]
+
+[node name="TowerDefence" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(7.84771, 0, 0, 0, 0.143566, 0, 0, 0, 7.21417, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_yypag")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_53swc")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.656059, 0.75471, 0, -0.75471, 0.656059, -4.71499, 7.27966, 7.15028)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.922504, 0.385987, 0, -0.385987, 0.922504, 0, 4.39309, 6.18197)
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.15244, 0)
+text = "Tower Defence Level
+"
+font_size = 128

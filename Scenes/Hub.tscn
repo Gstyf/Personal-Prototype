@@ -2,9 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://13jky1qrd4kh" path="res://Scenes/MainCharacter.tscn" id="1_uh758"]
 [ext_resource type="PackedScene" uid="uid://dltqep85ntqcf" path="res://Scenes/tavern.tscn" id="2_dagtt"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_rvkl2"]
-size = Vector3(3.60596, 1, 4.19971)
+[ext_resource type="PackedScene" uid="uid://clc82osoa0wgq" path="res://Scenes/warp_zone.tscn" id="3_4tour"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -19,8 +17,5 @@ transform = Transform3D(-0.404264, -0.317681, 0.8577, 0, 0.937744, 0.347329, -0.
 
 [node name="Tavern" parent="." instance=ExtResource("2_dagtt")]
 
-[node name="Area3D" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.74988, 1.66542, -7.95298)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-shape = SubResource("BoxShape3D_rvkl2")
+[node name="WarpZone" parent="." instance=ExtResource("3_4tour")]
+transform = Transform3D(-0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258819, -7.77354, 1.89348, 6.26114)
