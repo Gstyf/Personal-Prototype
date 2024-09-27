@@ -1,5 +1,8 @@
 Changelog for Prototype Project:
 
+Test Save to see if version control mirroring works (this is pushed my my personal github page, but I have the repository mirrored to my Uppsala University Gitea account). Hopefully this will work!
+
+
 27/09/2024:
 Still trying to figure out the scene loading system. Got a good idea from Tommi of instead of trying to load a whole new scene, instead make all game modes their own scene nodes in a 'Game Manager' scene, and then just load and unload the other game modes as required on the Game Manager Scene. That might be easier and make more sense. Will give this a try.
 
