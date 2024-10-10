@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://ug0kkmoryl3j"]
+
+[ext_resource type="Script" path="res://Scripts/projectile.gd" id="1_4smpu"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ir7aq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dc1kg"]
+size = Vector3(0.130127, 0.117554, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2to4x"]
+size = Vector3(0.244629, 0.246094, 1.10779)
+
+[node name="Projectile" type="CharacterBody3D"]
+script = ExtResource("1_4smpu")
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -1.31134e-07, -1, 0, 3, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_ir7aq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0020752, 0.00238037, 0)
+shape = SubResource("BoxShape3D_dc1kg")
+
+[node name="Collision" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00366211, -0.00585938, 0.00653076)
+shape = SubResource("BoxShape3D_2to4x")
+
+[connection signal="body_entered" from="Collision" to="." method="_on_collision_body_entered"]

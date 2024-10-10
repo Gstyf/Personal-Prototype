@@ -6,7 +6,7 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_du8jy"]
 
-[node name="CharacterBody3D" type="CharacterBody3D"]
+[node name="Main Character" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.81129, 0)
 collision_layer = 2
 script = ExtResource("1_b3pkg")

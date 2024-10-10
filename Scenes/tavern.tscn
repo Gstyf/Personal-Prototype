@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dltqep85ntqcf"]
+[gd_scene load_steps=7 format=3 uid="uid://dltqep85ntqcf"]
 
 [ext_resource type="PackedScene" uid="uid://xfg781k0aqf7" path="res://Models/Tavern.blend" id="1_75m3b"]
 [ext_resource type="PackedScene" uid="uid://ckxbu2btkpbr7" path="res://Models/table.blend" id="2_sjnqk"]
@@ -6,15 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://c7q38np135y14" path="res://Models/bar counter.blend" id="4_381vs"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_0hs4l"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_2kx2o"]
-size = Vector3(2.63886, 0.0424194, 2.90896)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_yd80c"]
-size = Vector3(2.74622, 0.167694, 2.47282)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_q0uak"]
-size = Vector3(5.06623, 0.484863, 7.12939)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b7f00"]
 size = Vector3(0.291992, 4.96777, 21.4632)
@@ -24,20 +15,8 @@ size = Vector3(0.291992, 4.96777, 21.4632)
 [node name="Tavern" parent="." instance=ExtResource("1_75m3b")]
 
 [node name="FloorCollision" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.974506, 0, 0, 0, 0.999964, 0, 0, 0, 1.09072, 0, 0.117538, -0.0661266)
+transform = Transform3D(0.974506, 0, 0, 0, 0.999964, 0, 0, 0, 1.09072, 0, 1.25437, -0.0661266)
 shape = SubResource("WorldBoundaryShape3D_0hs4l")
-
-[node name="Stairs" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.92751, 0.373797, 0, -0.373797, 0.92751, -3.04595, 0.559778, 6.73111)
-shape = SubResource("BoxShape3D_2kx2o")
-
-[node name="Stairs2" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.10173, 1.09825, 9.33544)
-shape = SubResource("BoxShape3D_yd80c")
-
-[node name="Landing" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.00499, 0.957758, 6.90244)
-shape = SubResource("BoxShape3D_q0uak")
 
 [node name="Wall" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.6066, 2.4828, -0.172348)
@@ -48,22 +27,22 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.4663
 shape = SubResource("BoxShape3D_b7f00")
 
 [node name="table" parent="." instance=ExtResource("2_sjnqk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1.03761, 0)
 
 [node name="table2" parent="." instance=ExtResource("2_sjnqk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -7)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1.03761, -7)
 
 [node name="chair" parent="." instance=ExtResource("3_usi5p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8.13788, 0.117538, -0.0473397)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8.13788, 1.15515, -0.0473397)
 
 [node name="chair2" parent="." instance=ExtResource("3_usi5p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.83961, 0.117538, -2.39184)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.83961, 1.15515, -2.39184)
 
 [node name="chair3" parent="." instance=ExtResource("3_usi5p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.06694, 0.117538, -9.35836)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.06694, 1.15515, -9.35836)
 
 [node name="chair4" parent="." instance=ExtResource("3_usi5p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8.40352, 0.117538, -6.96643)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8.40352, 1.15515, -6.96643)
 
 [node name="bar counter" parent="." instance=ExtResource("4_381vs")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 3.71195, 0.117538, 7.15389)
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 4.50903, 1.15515, 6.82786)

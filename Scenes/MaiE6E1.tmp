@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpura6d73oesv"]
+
+[ext_resource type="Script" path="res://Scripts/main_scene.gd" id="1_5tx36"]
+[ext_resource type="PackedScene" uid="uid://dnc10ecx7q077" path="res://Scenes/Hub.tscn" id="1_5ypqa"]
+[ext_resource type="PackedScene" uid="uid://28yg82c3wv0u" path="res://Scenes/tower_defence.tscn" id="2_31g80"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_5tx36")
+
+[node name="Hub" parent="." instance=ExtResource("1_5ypqa")]
+
+[node name="TowerDefence" parent="." instance=ExtResource("2_31g80")]
+visible = false
