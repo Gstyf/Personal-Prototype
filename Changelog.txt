@@ -1,5 +1,22 @@
 Changelog for Prototype Project:
 
+10/10/2024:
+I forgot to update this changelog for ages. Oops!
+REMEBER!! I can commit to my local repository without pushing to git. Do this often.
+
+Changes since the 28th have been:
+1) I have created a level for my tower defence, it contains two paths that merge into a single one moving towards an exit. There are some trees and rocks as decor. There are plinths that will be where you can place towers to shoot at enemies.
+
+2) I have finally implemented the working scene transition script. Currently all game modes are part of the same main scene as child nodes. The main node has a game manager script that keeps track of which is the current game mode and enables and disables script processes of in/active scripts as needed. When a game mode is changed, the main camera is moved to the spot pertinent to the level - NOTE: This is a tedious process, try to find a better way to implement this. Consider an array of cameras in main that is retrieved from each game mode child node and then toggle between them as necessary.
+
+3) I have implemented paths and path followers (which are the enemies). They will move towards the end of the level and then disappear. Currently there is no effect of them reaching he end.
+
+4) I have implemented defenders that have a collision sphere looking for enemies, looks at them and then shoots them. They just shoot a projectile that tracks directly towards the enemy. TODO: See if I can implement a sine wave arch to make it move more like an arrow.
+
+TODO: Implement script to place defenders on plinths in level (consider a collision3d with a mouse position raycast to place the defender.
+
+
+28/09/2024:
 Test Save to see if version control mirroring works (this is pushed my my personal github page, but I have the repository mirrored to my Uppsala University Gitea account). Hopefully this will work!
 
 
