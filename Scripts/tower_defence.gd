@@ -3,7 +3,7 @@ extends Node3D
 @onready var td_camera_pos: Node3D = %TDCameraPos
 @onready var spawn_timer: Timer = $SpawnTimer
 
-@onready var enemy: PackedScene = preload("res://Scenes/Enemy.tscn")
+@onready var enemy: PackedScene = preload("res://Scenes/TowerDefence/Enemy.tscn")
 
 @onready var path_one: Path3D = $PathOne
 @onready var path_two: Path3D = $PathTwo

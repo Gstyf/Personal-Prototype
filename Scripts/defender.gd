@@ -1,7 +1,7 @@
 extends StaticBody3D
 
-var projectile : PackedScene = preload("res://Scenes/projectile.tscn")
-@export var bulletDamage: int = 5
+var projectile : PackedScene = preload("res://Scenes/TowerDefence/projectile.tscn")
+@export var bulletDamage: int = 3
 var currentTargets: Array = []
 var curr  : CharacterBody3D
 var canShoot : bool = true

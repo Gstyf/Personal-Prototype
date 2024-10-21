@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://ug0kkmoryl3j"]
 
-[ext_resource type="Script" path="res://Scripts/projectile.gd" id="1_4smpu"]
+[ext_resource type="Script" path="res://Scripts/projectile.gd" id="1_y1b0y"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_ir7aq"]
 
@@ -11,7 +11,7 @@ size = Vector3(0.130127, 0.117554, 1)
 size = Vector3(0.244629, 0.246094, 1.10779)
 
 [node name="Projectile" type="CharacterBody3D"]
-script = ExtResource("1_4smpu")
+script = ExtResource("1_y1b0y")
 
 [node name="CSGMesh3D" type="CSGMesh3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -1.31134e-07, -1, 0, 3, -4.37114e-08, 0, 0, 0)

@@ -1,5 +1,10 @@
 Changelog for Prototype Project:
 
+21/10/2024:
+Again, forgot to update the changelog. Changes since last update:
+- 
+- folder clean-up for scenes
+
 10/10/2024:
 I forgot to update this changelog for ages. Oops!
 REMEBER!! I can commit to my local repository without pushing to git. Do this often.
