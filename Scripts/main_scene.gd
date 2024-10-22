@@ -17,7 +17,8 @@ enum SceneToLoad { NONE, HUB, TD, TBS, RTS }
 func _ready() -> void:
 	activeNode.visible = true
 	activeNode.process_mode = Node.PROCESS_MODE_INHERIT
-	pass
+	main_camera = hub.ReturnCamera()
+	main_camera.make_current()
 
 func _input(event: InputEvent) -> void:
 	if currentMode == ACTIVE_GAME_MODE.HUB:
@@ -36,7 +37,8 @@ func HandleHubSceneSelection(event: InputEvent) -> void: #this might not be the 
 				activeNode = tower_defence
 				activeNode.visible = true
 				activeNode.process_mode = Node.PROCESS_MODE_INHERIT
-				main_camera.transform = tower_defence.get_node("TDCameraPos").transform
+				main_camera = tower_defence.ReturnCamera()
+				main_camera.make_current()
 				print("loading TD level!")
 			SceneToLoad.TBS:
 				pass

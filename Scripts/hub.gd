@@ -14,3 +14,6 @@ func _on_warp_td_player_in_zone(inZone: bool) -> void:
 		print("in TD warp")
 	else:
 		emit_signal("warpToThisZone", ZoneToWarpTo.NONE)
+
+func ReturnCamera() -> Camera3D:
+	return %HubCamera

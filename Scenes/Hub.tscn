@@ -11,6 +11,10 @@ script = ExtResource("1_26rtk")
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_uh758")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.327397, 3.41062, -0.101601)
 
+[node name="HubCamera" type="Camera3D" parent="CharacterBody3D"]
+unique_name_in_owner = true
+transform = Transform3D(-4.37114e-08, -0.563411, 0.826177, 0, 0.826177, 0.563411, -1, 2.46275e-08, -3.61133e-08, 6.29454, 4.47618, -2.75143e-07)
+
 [node name="Tavern" parent="." instance=ExtResource("2_dagtt")]
 
 [node name="Warp_TD" parent="." instance=ExtResource("3_4tour")]
