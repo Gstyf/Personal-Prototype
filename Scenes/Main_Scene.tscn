@@ -12,7 +12,7 @@ unique_name_in_owner = true
 visible = false
 
 [node name="TowerDefence" parent="." instance=ExtResource("2_31g80")]
-process_mode = 4
+unique_name_in_owner = true
 visible = false
 
 [node name="MainCamera" type="Camera3D" parent="."]
