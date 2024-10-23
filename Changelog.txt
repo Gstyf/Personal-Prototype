@@ -1,5 +1,9 @@
 Changelog for Prototype Project:
 
+23/10/2024:
+- added tiles for Turn-Based Strategy mode (3 types, grass, ground, concrete)
+- the plinths for the tower defence can now instantiate towers that shoot at enemies by clicking on them (no UI instruction for this). 
+
 21/10/2024:
 Again, forgot to update the changelog. Changes since last update:
 - fixed the camera system so I can pre-place cameras in scenes instead of having to retrieve a transform to move a single camera around.
