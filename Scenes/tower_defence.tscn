@@ -54,7 +54,30 @@ curve = SubResource("Curve3D_3qc1x")
 transform = Transform3D(0.999994, -0.000404838, -0.00336164, 0, -0.992826, 0.119565, -0.00338593, -0.119564, -0.992821, -4.71499, -0.00605392, 41.2354)
 curve = SubResource("Curve3D_q3sa7")
 
-[node name="DefenderPlinth" parent="." instance=ExtResource("3_0loic")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.327515, 0.388794, -0.0109558)
+[node name="Plinths" type="Node" parent="."]
+
+[node name="DefenderPlinth" parent="Plinths" instance=ExtResource("3_0loic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.201595, 0.388641, -0.177668)
+
+[node name="DefenderPlinth2" parent="Plinths" instance=ExtResource("3_0loic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43772, 0.388645, -14.7663)
+
+[node name="DefenderPlinth3" parent="Plinths" instance=ExtResource("3_0loic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.3489, 0.388638, -5.99186)
+
+[node name="DefenderPlinth4" parent="Plinths" instance=ExtResource("3_0loic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.5956, 0.388638, -15.5806)
+
+[node name="DefenderPlinth5" parent="Plinths" instance=ExtResource("3_0loic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.3503, 0.388645, 13.7693)
+
+[node name="DefenderPlinth6" parent="Plinths" instance=ExtResource("3_0loic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53581, 0.388641, 16.6866)
+
+[node name="DefenderPlinth7" parent="Plinths" instance=ExtResource("3_0loic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.9195, 0.388638, -9.26616)
+
+[node name="DefenderPlinth8" parent="Plinths" instance=ExtResource("3_0loic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.027, 0.388641, -23.7058)
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
