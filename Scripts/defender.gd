@@ -35,18 +35,15 @@ func Shoot() -> void: #function for shooting projectile
 	tempProjectile.damage = bulletDamage #make damage of projectile same as defender's
 	get_node("BulletContainer").add_child(tempProjectile) #add projectiles to node containing projectiles
 	tempProjectile.global_position = $MeshInstance3D/MarkerToAim.global_position #start the projectile from the aim marker's global position
-	print("fired projectile!")
 
 func _on_enemy_detector_body_entered(body: Node3D) -> void:
 	if body.is_in_group("Enemy"):
-		print("that's an enemy!")
 		currentTargets.append(body)
 		ChooseTarget(currentTargets)
 
 func _on_enemy_detector_body_exited(body: Node3D) -> void:
 	if body.is_in_group("Enemy"):
 		currentTargets.erase(body)
-		print("can't reach enemy.")
 		ChooseTarget(currentTargets)
 
 

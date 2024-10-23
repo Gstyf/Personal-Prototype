@@ -11,7 +11,6 @@ func _physics_process(delta: float) -> void: #function to make projectile move t
 		
 		move_and_slide() #See about adding a sine-wave to make the projectile arch
 	else: #if no valid target, delete projectile
-		print("Projectile Target Disappeared")
 		queue_free()
 
 

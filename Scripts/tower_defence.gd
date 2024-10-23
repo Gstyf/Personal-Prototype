@@ -25,7 +25,6 @@ func GameManager() -> void:
 		
 		enemiesToSpawn -= 1
 		canSpawn = false
-		print("spawned enemy")
 
 func _on_spawn_timer_timeout() -> void:
 	canSpawn = true #Reset so that the next enemy can spawn

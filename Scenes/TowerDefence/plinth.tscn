@@ -1,10 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://b0tyebspbf8x2"]
+[gd_scene load_steps=4 format=3 uid="uid://bs7sn0mqvynvf"]
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_yb30x"]
-height = 0.535124
+[ext_resource type="Script" path="res://Scripts/plinth.gd" id="1_qy1eq"]
 
-[node name="Area3D" type="Area3D"]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_4rcj3"]
+radius = 2.0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.26583, 0)
-shape = SubResource("CylinderShape3D_yb30x")
+[sub_resource type="CylinderMesh" id="CylinderMesh_jju0l"]
+top_radius = 1.8
+bottom_radius = 2.0
+height = 0.1
+
+[node name="DefenderPlinth" type="Area3D"]
+script = ExtResource("1_qy1eq")
+
+[node name="ClickableArea" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CylinderShape3D_4rcj3")
+
+[node name="AreaIndicator" type="MeshInstance3D" parent="ClickableArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+mesh = SubResource("CylinderMesh_jju0l")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
