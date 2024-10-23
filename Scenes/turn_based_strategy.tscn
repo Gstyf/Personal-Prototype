@@ -7,6 +7,8 @@
 
 [node name="TurnBasedStrategy" type="Node3D"]
 script = ExtResource("1_k8aal")
+gridWidth = 14
+gridDepth = 14
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.89749, 0.29335, -0.32933, 0.43965, -0.53592, 0.720761, 0.0349409, -0.791665, -0.609954, -10.9487, 6.37717, 0.109449)
@@ -786,3 +788,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2)
 
 [node name="Tile_Grass96" parent="Tiles" instance=ExtResource("1_oeula")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -2)
+
+[node name="MapGrid" type="Node3D" parent="."]
+unique_name_in_owner = true

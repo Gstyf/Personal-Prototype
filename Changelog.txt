@@ -1,6 +1,7 @@
 Changelog for Prototype Project:
 
 23/10/2024:
+- Added script to spawn in tiles (these are not functional yet!)
 - Added textures for the grid that will be spawned.
 - Sorted the folders (not essential, but was getting hard to keep track)
 - Scene transition script from Hub to TBS

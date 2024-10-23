@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3cqhb5ssgvpo"]
+
+[ext_resource type="Texture2D" uid="uid://dbrhds16bhww4" path="res://Textures/SquareWhite.png" id="1_8gbo7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h2xww"]
+transparency = 1
+albedo_texture = ExtResource("1_8gbo7")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_5vbke"]
+
+[node name="GridTile" type="Node3D"]
+
+[node name="GridMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.15, 1)
+material_override = SubResource("StandardMaterial3D_h2xww")
+mesh = SubResource("PlaneMesh_5vbke")

@@ -1,6 +1,5 @@
 extends Node3D
 
-@onready var td_camera_pos: Node3D = %TDCameraPos
 @onready var spawn_timer: Timer = $SpawnTimer
 
 @onready var enemy: PackedScene = preload("res://Scenes/TowerDefence/Enemy.tscn")
@@ -30,4 +29,4 @@ func _on_spawn_timer_timeout() -> void:
 	canSpawn = true #Reset so that the next enemy can spawn
 
 func ReturnCamera() -> Camera3D: #returns the camera from this scene
-	return $TDCamera	
+	return %TBSCamera
