@@ -1,6 +1,10 @@
 Changelog for Prototype Project:
 
 23/10/2024:
+- Added textures for the grid that will be spawned.
+- Sorted the folders (not essential, but was getting hard to keep track)
+- Scene transition script from Hub to TBS
+- created basic map for TBS
 - added tiles for Turn-Based Strategy mode (3 types, grass, ground, concrete)
 - the plinths for the tower defence can now instantiate towers that shoot at enemies by clicking on them (no UI instruction for this). 
 

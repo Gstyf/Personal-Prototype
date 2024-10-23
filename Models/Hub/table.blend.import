@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cid3d11xrlxds"
-path="res://.godot/imported/chair.blend-20ddf4dd7e066947c28527e04aa882d9.scn"
+uid="uid://ckxbu2btkpbr7"
+path="res://.godot/imported/table.blend-952cf7344b826365365dc945f2dd0b3c.scn"
 
 [deps]
 
-source_file="res://Models/chair.blend"
-dest_files=["res://.godot/imported/chair.blend-20ddf4dd7e066947c28527e04aa882d9.scn"]
+source_file="res://Models/Hub/table.blend"
+dest_files=["res://.godot/imported/table.blend-952cf7344b826365365dc945f2dd0b3c.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "nodes": {
-"PATH:Seat": {
+"PATH:Table Top": {
 "generate/physics": true
 }
 }

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ckxbu2btkpbr7"
-path="res://.godot/imported/table.blend-0708b38ab971bfab0278c0489976b375.scn"
+uid="uid://63cibc20kpb"
+path="res://.godot/imported/TDSampleLevel.blend-54a7b336a87d2290fffd609aa243484b.scn"
 
 [deps]
 
-source_file="res://Models/table.blend"
-dest_files=["res://.godot/imported/table.blend-0708b38ab971bfab0278c0489976b375.scn"]
+source_file="res://Models/TD/TDSampleLevel.blend"
+dest_files=["res://.godot/imported/TDSampleLevel.blend-54a7b336a87d2290fffd609aa243484b.scn"]
 
 [params]
 
@@ -33,7 +33,31 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "nodes": {
-"PATH:Table Top": {
+"PATH:Ground": {
+"generate/physics": true
+},
+"PATH:Plinth": {
+"generate/physics": true
+},
+"PATH:Plinth_001": {
+"generate/physics": true
+},
+"PATH:Plinth_002": {
+"generate/physics": true
+},
+"PATH:Plinth_003": {
+"generate/physics": true
+},
+"PATH:Plinth_004": {
+"generate/physics": true
+},
+"PATH:Plinth_005": {
+"generate/physics": true
+},
+"PATH:Plinth_006": {
+"generate/physics": true
+},
+"PATH:Plinth_007": {
 "generate/physics": true
 }
 }

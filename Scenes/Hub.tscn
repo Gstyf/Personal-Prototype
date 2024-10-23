@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://dnc10ecx7q077"]
 
 [ext_resource type="Script" path="res://Scripts/hub.gd" id="1_26rtk"]
-[ext_resource type="PackedScene" uid="uid://13jky1qrd4kh" path="res://Scenes/MainCharacter.tscn" id="1_uh758"]
-[ext_resource type="PackedScene" uid="uid://dltqep85ntqcf" path="res://Scenes/tavern.tscn" id="2_dagtt"]
-[ext_resource type="PackedScene" uid="uid://clc82osoa0wgq" path="res://Scenes/warp_zone.tscn" id="3_4tour"]
+[ext_resource type="PackedScene" uid="uid://13jky1qrd4kh" path="res://Scenes/Hub/MainCharacter.tscn" id="1_uh758"]
+[ext_resource type="PackedScene" uid="uid://dltqep85ntqcf" path="res://Scenes/Hub/tavern.tscn" id="2_dagtt"]
+[ext_resource type="PackedScene" uid="uid://clc82osoa0wgq" path="res://Scenes/Hub/warp_zone.tscn" id="3_4tour"]
 
 [node name="Hub" type="Node3D"]
 script = ExtResource("1_26rtk")
@@ -18,9 +18,13 @@ transform = Transform3D(-4.37114e-08, -0.563411, 0.826177, 0, 0.826177, 0.563411
 [node name="Tavern" parent="." instance=ExtResource("2_dagtt")]
 
 [node name="Warp_TD" parent="." instance=ExtResource("3_4tour")]
-transform = Transform3D(-0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258819, -7.77354, 1.37459, 6.26114)
+transform = Transform3D(-0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258819, -7.774, 1, 6.261)
+
+[node name="Warp_TBS" parent="." instance=ExtResource("3_4tour")]
+transform = Transform3D(0.135007, 0, 0.990845, 0, 1, 0, -0.990845, 0, 0.135007, -6.533, 1, -4.78)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.959052, 0.204321, 0.196142, -0.177199, -0.107393, 0.978298, 0.220951, -0.972995, -0.0667897, 0, 11.8847, -0.197132)
 
 [connection signal="playerInZone" from="Warp_TD" to="." method="_on_warp_td_player_in_zone"]
+[connection signal="playerInZone" from="Warp_TBS" to="." method="_on_warp_tbs_player_in_zone"]

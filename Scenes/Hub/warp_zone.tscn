@@ -1,13 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://clc82osoa0wgq"]
 
-[ext_resource type="Script" path="res://Scripts/warp_zone.gd" id="1_eco2v"]
+[ext_resource type="Script" path="res://Scripts/warp_zone.gd" id="1_3aelp"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_p7j3m"]
 radius = 2.0
 
 [node name="WarpZone" type="Area3D"]
 collision_mask = 2
-script = ExtResource("1_eco2v")
+script = ExtResource("1_3aelp")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://dltqep85ntqcf"]
 
-[ext_resource type="PackedScene" uid="uid://xfg781k0aqf7" path="res://Models/Tavern.blend" id="1_75m3b"]
-[ext_resource type="PackedScene" uid="uid://ckxbu2btkpbr7" path="res://Models/table.blend" id="2_sjnqk"]
-[ext_resource type="PackedScene" uid="uid://cid3d11xrlxds" path="res://Models/chair.blend" id="3_usi5p"]
-[ext_resource type="PackedScene" uid="uid://c7q38np135y14" path="res://Models/bar counter.blend" id="4_381vs"]
+[ext_resource type="PackedScene" uid="uid://xfg781k0aqf7" path="res://Models/Hub/Tavern.blend" id="1_75m3b"]
+[ext_resource type="PackedScene" uid="uid://ckxbu2btkpbr7" path="res://Models/Hub/table.blend" id="2_sjnqk"]
+[ext_resource type="PackedScene" uid="uid://cid3d11xrlxds" path="res://Models/Hub/chair.blend" id="3_usi5p"]
+[ext_resource type="PackedScene" uid="uid://c7q38np135y14" path="res://Models/Hub/bar counter.blend" id="4_381vs"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_0hs4l"]
 

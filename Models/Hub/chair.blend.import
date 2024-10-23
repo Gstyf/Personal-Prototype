@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c7q38np135y14"
-path="res://.godot/imported/bar counter.blend-0426ed34a22834b6cdfff05622760517.scn"
+uid="uid://cid3d11xrlxds"
+path="res://.godot/imported/chair.blend-3382aa7c86540749546fb732bb233af0.scn"
 
 [deps]
 
-source_file="res://Models/bar counter.blend"
-dest_files=["res://.godot/imported/bar counter.blend-0426ed34a22834b6cdfff05622760517.scn"]
+source_file="res://Models/Hub/chair.blend"
+dest_files=["res://.godot/imported/chair.blend-3382aa7c86540749546fb732bb233af0.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "nodes": {
-"PATH:CounterLeg": {
+"PATH:Seat": {
 "generate/physics": true
 }
 }

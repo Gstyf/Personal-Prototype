@@ -7,6 +7,8 @@ var currentMode: ACTIVE_GAME_MODE = ACTIVE_GAME_MODE.HUB
 
 @onready var hub: Node3D = $Hub
 @onready var tower_defence: Node3D = $TowerDefence
+@onready var turn_based_strategy: Node3D = %TurnBasedStrategy
+
 
 @onready var main_camera: Camera3D = $MainCamera
 @onready var activeNode: Node3D = hub #change this to menu later if appropriate
@@ -41,7 +43,14 @@ func HandleHubSceneSelection(event: InputEvent) -> void: #this might not be the 
 				main_camera.make_current()
 				print("loading TD level!")
 			SceneToLoad.TBS:
-				pass
+				activeNode.visible = false
+				activeNode.process_mode = Node.PROCESS_MODE_DISABLED
+				activeNode = turn_based_strategy
+				activeNode.visible = true
+				activeNode.process_mode = Node.PROCESS_MODE_INHERIT
+				main_camera = turn_based_strategy.ReturnCamera()
+				main_camera.make_current()
+				print("loading TBS level!")
 			SceneToLoad.RTS:
 				pass
 

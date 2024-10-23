@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://28yg82c3wv0u"]
 
 [ext_resource type="Script" path="res://Scripts/tower_defence.gd" id="1_ly6h8"]
-[ext_resource type="PackedScene" uid="uid://63cibc20kpb" path="res://Models/TDSampleLevel.blend" id="2_sfrft"]
+[ext_resource type="PackedScene" uid="uid://63cibc20kpb" path="res://Models/TD/TDSampleLevel.blend" id="2_sfrft"]
 [ext_resource type="PackedScene" uid="uid://bs7sn0mqvynvf" path="res://Scenes/TowerDefence/plinth.tscn" id="3_0loic"]
 
 [sub_resource type="Curve3D" id="Curve3D_3qc1x"]
@@ -42,10 +42,6 @@ autostart = true
 
 [node name="TDSampleLevel" parent="." instance=ExtResource("2_sfrft")]
 
-[node name="TDCameraPos" type="Node3D" parent="."]
-unique_name_in_owner = true
-transform = Transform3D(-0.642788, -0.439385, 0.627507, 0, 0.819152, 0.573576, -0.766044, 0.368688, -0.526541, 30, 25, -30)
-
 [node name="PathOne" type="Path3D" parent="."]
 transform = Transform3D(0.999994, -0.000404838, -0.00336164, 0, -0.992826, 0.119565, -0.00338593, -0.119564, -0.992821, -4.51495, 0, 40.0499)
 curve = SubResource("Curve3D_3qc1x")
@@ -54,7 +50,7 @@ curve = SubResource("Curve3D_3qc1x")
 transform = Transform3D(0.999994, -0.000404838, -0.00336164, 0, -0.992826, 0.119565, -0.00338593, -0.119564, -0.992821, -4.71499, -0.00605392, 41.2354)
 curve = SubResource("Curve3D_q3sa7")
 
-[node name="Plinths" type="Node" parent="."]
+[node name="Plinths" type="Node3D" parent="."]
 
 [node name="DefenderPlinth" parent="Plinths" instance=ExtResource("3_0loic")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.201595, 0.388641, -0.177668)

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjsr4otenu70f"]
+
+[ext_resource type="ArrayMesh" uid="uid://btblk4c4q4t4s" path="res://Models/TBS/2x2Tile.obj" id="1_4sjvl"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l417b"]
+size = Vector3(2, 0.1, 2)
+
+[node name="Tile_Stone" type="StaticBody3D"]
+
+[node name="2x2Tile" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+mesh = ExtResource("1_4sjvl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.05, 1)
+shape = SubResource("BoxShape3D_l417b")

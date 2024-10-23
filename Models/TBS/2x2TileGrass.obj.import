@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dovks3y5wcxca"
+path="res://.godot/imported/2x2TileGrass.obj-473ce3ab01d866ae648039b81fd2dd7a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/2x2TileGrass.obj-473ce3ab01d866ae648039b81fd2dd7a.mesh"]
+
+source_file="res://Models/TBS/2x2TileGrass.obj"
+dest_files=["res://.godot/imported/2x2TileGrass.obj-473ce3ab01d866ae648039b81fd2dd7a.mesh", "res://.godot/imported/2x2TileGrass.obj-473ce3ab01d866ae648039b81fd2dd7a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
