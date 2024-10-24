@@ -22,6 +22,7 @@ point_count = 18
 script = ExtResource("1_ly6h8")
 
 [node name="TDCamera" type="Camera3D" parent="."]
+unique_name_in_owner = true
 transform = Transform3D(-0.499769, -0.59062, 0.633561, 0.015182, 0.725375, 0.688187, -0.866025, 0.353553, -0.353553, 22.6645, 32.5833, -12.558)
 projection = 1
 size = 59.259

@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://c3v38w27hvs3j"]
+[gd_scene load_steps=8 format=3 uid="uid://c3v38w27hvs3j"]
 
 [ext_resource type="Script" path="res://Scripts/turn_based_strategy.gd" id="1_k8aal"]
 [ext_resource type="PackedScene" uid="uid://gviskmjmddwf" path="res://Scenes/TurnBasedStrategy/Tile_Grass.tscn" id="1_oeula"]
 [ext_resource type="PackedScene" uid="uid://44olnr50uda1" path="res://Scenes/TurnBasedStrategy/Tile_Dirt.tscn" id="2_jlphy"]
 [ext_resource type="PackedScene" uid="uid://cjsr4otenu70f" path="res://Scenes/TurnBasedStrategy/Tile_Stone.tscn" id="3_m2t7u"]
+[ext_resource type="PackedScene" uid="uid://b034i07hj776x" path="res://Scenes/TurnBasedStrategy/tbs_character.tscn" id="5_hknv1"]
+[ext_resource type="Script" path="res://Scripts/unit_manager.gd" id="5_o5d02"]
+[ext_resource type="PackedScene" uid="uid://r8wx05wsc5ha" path="res://Scenes/TurnBasedStrategy/tbs_enemy.tscn" id="6_nwevf"]
 
 [node name="TurnBasedStrategy" type="Node3D"]
 script = ExtResource("1_k8aal")
@@ -791,3 +794,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -2)
 
 [node name="MapGrid" type="Node3D" parent="."]
 unique_name_in_owner = true
+
+[node name="UnitManager" type="Node3D" parent="."]
+script = ExtResource("5_o5d02")
+
+[node name="TBSCharacter" parent="UnitManager" instance=ExtResource("5_hknv1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0.1, 5)
+
+[node name="TBSCharacter2" parent="UnitManager" instance=ExtResource("5_hknv1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.1, 9)
+
+[node name="TBSEnemy" parent="UnitManager" instance=ExtResource("6_nwevf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -3)
+
+[node name="TBSEnemy2" parent="UnitManager" instance=ExtResource("6_nwevf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 1)

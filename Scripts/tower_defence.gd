@@ -29,4 +29,4 @@ func _on_spawn_timer_timeout() -> void:
 	canSpawn = true #Reset so that the next enemy can spawn
 
 func ReturnCamera() -> Camera3D: #returns the camera from this scene
-	return %TBSCamera
+	return %TDCamera

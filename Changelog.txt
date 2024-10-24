@@ -1,5 +1,10 @@
 Changelog for Prototype Project:
 
+24/10/2024:
+- Fixed a 'return null' bug I accidentally introduced where trying to switch to TD camera returned null. Oops. 
+- Added script for unit manager to keep track hero and enemy units in array
+- Added hero and enemy placeholder characters
+
 23/10/2024:
 - Added script to spawn in tiles (these are not functional yet!)
 - Added textures for the grid that will be spawned.

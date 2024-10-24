@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://b034i07hj776x"]
+
+[ext_resource type="Script" path="res://Scripts/tbs_character.gd" id="1_motu4"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_dhmel"]
+top_radius = 0.1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_htd1u"]
+albedo_color = Color(0.101961, 1, 1, 1)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_pcm3y"]
+
+[node name="TBSCharacter" type="CharacterBody3D"]
+script = ExtResource("1_motu4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00583, 0)
+mesh = SubResource("CylinderMesh_dhmel")
+surface_material_override/0 = SubResource("StandardMaterial3D_htd1u")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00569, 0)
+shape = SubResource("CylinderShape3D_pcm3y")
+
+[connection signal="playerCharacterGotClicked" from="." to="." method="_on_player_character_got_clicked"]
