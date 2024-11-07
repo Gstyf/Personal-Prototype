@@ -2,7 +2,8 @@ extends Node3D
 
 @onready var grid_mesh: MeshInstance3D = $GridMesh
 
-enum currentState { EMPTY, PLAYER, ENEMY }
+
+enum currentState { EMPTY, PLAYER, ENEMY, RANGE }
 var state = currentState.EMPTY
 var isOccupied: bool = false
 var isHovered: bool = false
