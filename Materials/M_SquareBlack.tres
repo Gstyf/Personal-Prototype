@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://j68o2goqjvum"]
+
+[ext_resource type="Texture2D" uid="uid://dbn4qgn7y0bkg" path="res://Textures/SquareBlack.png" id="1_16qse"]
+
+[resource]
+transparency = 1
+albedo_texture = ExtResource("1_16qse")
