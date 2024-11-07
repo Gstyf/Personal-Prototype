@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [global_group]
 
 Enemy=""
+TBSCharacter="This object is a playable character in the TBS game mode"
+TBSEnemy="This object is an enemy in the TBS gamemode"
 
 [input]
 

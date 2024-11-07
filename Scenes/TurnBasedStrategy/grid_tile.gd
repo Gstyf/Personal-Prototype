@@ -2,10 +2,42 @@ extends Node3D
 
 @onready var grid_mesh: MeshInstance3D = $GridMesh
 
+enum currentState { EMPTY, PLAYER, ENEMY }
+var state = currentState.EMPTY
+var isOccupied: bool = false
+var isHovered: bool = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	match state:
+		currentState.EMPTY:
+			if isHovered == false:
+				grid_mesh.set_surface_override_material(0, preload("res://Materials/M_SquareWhite.tres"))
+		currentState.PLAYER:
+			grid_mesh.set_surface_override_material(0, preload("res://Materials/M_SquareBlue.tres"))
+		currentState.ENEMY:
+			grid_mesh.set_surface_override_material(0, preload("res://Materials/M_SquareRed.tres"))
+
+
+func _on_mouse_entered() -> void: #Change colour outline of tile when hovered (unless occupied)
+	if state == currentState.EMPTY:
+		isHovered = true
+		grid_mesh.set_surface_override_material(0, preload("res://Materials/M_SquareYellow.tres"))
+
+func _on_mouse_exited() -> void: #returns the colour of the tile to its previous state
+	if state == currentState.EMPTY:
+		isHovered = false
+		grid_mesh.set_surface_override_material(0, preload("res://Materials/M_SquareWhite.tres"))
+
+func _on_body_entered(body: Node3D) -> void:
+	if body.is_in_group("TBSCharacter"):
+		isOccupied = true
+		state = currentState.PLAYER
+	elif body.is_in_group("TBSEnemy"):
+		isOccupied = true
+		state = currentState.ENEMY
+	pass # Replace with function body.

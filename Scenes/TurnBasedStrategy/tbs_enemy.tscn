@@ -10,7 +10,7 @@ albedo_color = Color(1, 0.215686, 0.431373, 1)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_pcm3y"]
 
-[node name="TBSEnemy" type="CharacterBody3D"]
+[node name="TBSEnemy" type="CharacterBody3D" groups=["TBSEnemy"]]
 script = ExtResource("1_fuoep")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
