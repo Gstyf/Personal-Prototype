@@ -1,17 +1,20 @@
 extends Node3D
 
+signal tileClicked(Area3D)
+
+@onready var grid: Node3D = $Grid
+
 const GRID_TILE = preload("res://Scenes/TurnBasedStrategy/grid_tile.tscn")
-
-@export var tileArray = {}
-
 var gridTile : PackedScene = GRID_TILE
-
 @export var gridWidth = 0
 @export var gridDepth = 0
+
+@export var tileDictionary = {} #Dictionary for storing tiles in scene, key is Vector2 for position on tiles.
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	DrawGrid(gridWidth, gridDepth)
+	Events.connect("tileWasClicked", _on_tileWasClicked)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -39,4 +42,9 @@ func DrawGrid(width : int, height : int) -> void: #Draw out grid by rendering a 
 			var tempTile : Node3D = gridTile.instantiate()
 			tempTile.position = Vector3((x * 2) - xOffset, 0, (z * 2) - zOffset)
 			get_node("%MapGrid").add_child(tempTile)
-			tileArray[Vector2(x, z)] = tempTile
+			tileDictionary[Vector2(x, z)] = tempTile
+
+func _on_tileWasClicked(tile: Area3D):
+	var key = tileDictionary.find_key(tile)
+	print("The tile that was clicked was tile " + str(key))	
+	pass

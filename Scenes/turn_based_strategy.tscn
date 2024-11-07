@@ -19,6 +19,7 @@ transform = Transform3D(0.89749, 0.29335, -0.32933, 0.43965, -0.53592, 0.720761,
 [node name="TBSCamera" type="Camera3D" parent="."]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 0.0871558, 0.996195, 0, -0.996195, 0.0871558, 0, 14.057, 2)
+current = true
 size = 31.7675
 near = 0.01
 far = 275.52

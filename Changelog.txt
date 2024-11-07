@@ -3,6 +3,7 @@ Changelog for Prototype Project:
 7/11/2024:
 STILL FORGETTING TO UPDATE THIS!!! Retroactive updates:
 
+- Implemented an Event Bus (part of the signal system) to communicate that a tile was clicked across scripts. Very difficult to implement, but needed for my A* implementation (which I will probably not finish on time).
 - Experienced existential dread over what will happen with a Trump/Vance presidency.
 - Implemented script that updates the grid tiles to indicate if a unit is on them. 
 - Implemented proper 3D materials (StandardMaterial3D) so that my grid tiles can be updated real-time.

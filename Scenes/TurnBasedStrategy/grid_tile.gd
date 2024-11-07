@@ -2,7 +2,6 @@ extends Node3D
 
 @onready var grid_mesh: MeshInstance3D = $GridMesh
 
-
 enum currentState { EMPTY, PLAYER, ENEMY, RANGE }
 var state = currentState.EMPTY
 var isOccupied: bool = false
@@ -46,3 +45,7 @@ func _on_body_exited(body: Node3D) -> void: #update the tile to reflect it has n
 	if body.is_in_group("TBSCharacter") or body.is_in_group("TBSEnemy"):
 		isOccupied = false
 		state = currentState.EMPTY
+
+func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
+	if Input.is_action_just_pressed("leftClick") and state == currentState.PLAYER: 
+		Events.emit_signal("tileWasClicked", self)

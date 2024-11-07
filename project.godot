@@ -15,6 +15,10 @@ run/main_scene="res://Scenes/Main_Scene.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Events="*res://Scripts/events.gd"
+
 [global_group]
 
 Enemy=""
