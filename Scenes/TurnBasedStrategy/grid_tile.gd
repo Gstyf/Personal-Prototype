@@ -16,9 +16,9 @@ func _process(delta: float) -> void:
 	match state:
 		currentState.EMPTY:
 			if isHovered == false:
-				grid_mesh.set_surface_override_material(0, preload("res://Materials/M_SquareWhite.tres"))
+				grid_mesh.set_surface_override_material(0, preload("res://Materials/M_SquareBlack.tres"))
 		currentState.PLAYER:
-			grid_mesh.set_surface_override_material(0, preload("res://Materials/M_SquareBlue.tres"))
+			grid_mesh.set_surface_override_material(0, preload("res://Materials/M_SquareWhite.tres"))
 		currentState.ENEMY:
 			grid_mesh.set_surface_override_material(0, preload("res://Materials/M_SquareRed.tres"))
 
@@ -31,13 +31,17 @@ func _on_mouse_entered() -> void: #Change colour outline of tile when hovered (u
 func _on_mouse_exited() -> void: #returns the colour of the tile to its previous state
 	if state == currentState.EMPTY:
 		isHovered = false
-		grid_mesh.set_surface_override_material(0, preload("res://Materials/M_SquareWhite.tres"))
+		grid_mesh.set_surface_override_material(0, preload("res://Materials/M_SquareBlack.tres"))
 
-func _on_body_entered(body: Node3D) -> void:
+func _on_body_entered(body: Node3D) -> void: #update the tile to reflect if a unit is on it
 	if body.is_in_group("TBSCharacter"):
 		isOccupied = true
 		state = currentState.PLAYER
 	elif body.is_in_group("TBSEnemy"):
 		isOccupied = true
 		state = currentState.ENEMY
-	pass # Replace with function body.
+
+func _on_body_exited(body: Node3D) -> void: #update the tile to reflect it has no unit on it
+	if body.is_in_group("TBSCharacter") or body.is_in_group("TBSEnemy"):
+		isOccupied = false
+		state = currentState.EMPTY

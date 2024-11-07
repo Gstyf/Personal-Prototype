@@ -1,5 +1,12 @@
 Changelog for Prototype Project:
 
+7/11/2024:
+STILL FORGETTING TO UPDATE THIS!!! Retroactive updates:
+
+- Experienced existential dread over what will happen with a Trump/Vance presidency.
+- Implemented script that updates the grid tiles to indicate if a unit is on them. 
+- Implemented proper 3D materials (StandardMaterial3D) so that my grid tiles can be updated real-time.
+
 24/10/2024:
 - Fixed a 'return null' bug I accidentally introduced where trying to switch to TD camera returned null. Oops. 
 - Added script for unit manager to keep track hero and enemy units in array

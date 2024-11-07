@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://c3cqhb5ssgvpo"]
 
 [ext_resource type="Script" path="res://Scenes/TurnBasedStrategy/grid_tile.gd" id="1_ss323"]
-[ext_resource type="Material" uid="uid://c1jikgysu5264" path="res://Materials/M_SquareWhite.tres" id="2_mxvli"]
+[ext_resource type="Material" uid="uid://j68o2goqjvum" path="res://Materials/M_SquareBlack.tres" id="2_h1nv3"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_5vbke"]
 
@@ -14,12 +14,13 @@ script = ExtResource("1_ss323")
 [node name="GridMesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.15, 1)
 mesh = SubResource("PlaneMesh_5vbke")
-surface_material_override/0 = ExtResource("2_mxvli")
+surface_material_override/0 = ExtResource("2_h1nv3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.15, 1)
 shape = SubResource("BoxShape3D_ia3n3")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
