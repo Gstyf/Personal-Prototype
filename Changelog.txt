@@ -1,4 +1,6 @@
 Changelog for Prototype Project:
+8/11/2024:
+- Implement script to locate tiles that are within range on the selected player tile and put them into a list and then display these days. Currently list is agnostic to whether the tile is blocked.
 
 7/11/2024:
 STILL FORGETTING TO UPDATE THIS!!! Retroactive updates:

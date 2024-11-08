@@ -1,6 +1,8 @@
 extends Node
 
-signal tileWasClicked(Area3D)
+signal tileWasClicked(Area3D) 		# returns the Area3D node that was clicked as a reference
+signal playerTileWasClicked(Area3D) # returns the Area3D node that was clicked as a reference
+signal playerCharacterWasClicked()
 
 
 # Called when the node enters the scene tree for the first time.

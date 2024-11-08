@@ -1,7 +1,5 @@
 extends CharacterBody3D
 
-signal playerCharacterGotClicked
-
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
@@ -27,7 +25,3 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
-
-
-func _on_player_character_got_clicked() -> void:
-	emit_signal("playerCharacterGotClicked")
