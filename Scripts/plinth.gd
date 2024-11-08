@@ -2,7 +2,8 @@ extends Area3D
 
 @onready var clickable_area: CollisionShape3D = $ClickableArea
 @onready var area_indicator: MeshInstance3D = $ClickableArea/AreaIndicator
-@onready var defender_slot: Node = $DefenderSlot
+@onready var defender_slot: Node3D = $DefenderSlot
+
 const DEFENDER = preload("res://Scenes/TowerDefence/defender.tscn")
 
 @export var showAreaIndicator : bool = false
@@ -16,13 +17,11 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func _on_mouse_entered() -> void:
-	print("Mouse over area!")
-
 func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
 	if Input.is_action_just_pressed("leftClick") and !hasDefender:
 		print("You clicked me!")
 		hasDefender = true
-		var tempDefender = DEFENDER.instantiate() #instantiate a defender
-		tempDefender.global_position = $".".global_position #set defender's position to this plith's position
-		defender_slot.add_child(tempDefender) #add a Defender instance as a child of Plinth
+		defender_slot.add_child(DEFENDER.instantiate()) #add a Defender instance as a child of Plinth
+
+func _on_mouse_entered() -> void:
+	print("Hovering This tile!")

@@ -19,7 +19,7 @@ var gridTile : PackedScene = GRID_TILE
 func _ready() -> void:
 	DrawGrid(gridWidth, gridDepth)
 	Events.connect("tileWasClicked", _on_tileWasClicked)
-	Events.connect("playerTileWasClicked", _FindTilesInRange)
+	Events.connect("unitTileWasClicked", _FindTilesInRange)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -49,7 +49,7 @@ func DrawGrid(width : int, height : int) -> void: #Draw out grid by rendering a 
 			get_node("%MapGrid").add_child(tempTile)
 			tileDictionary[Vector2(x, z)] = tempTile
 
-func _FindTilesInRange(playerTile: Area3D):
+func _FindTilesInRange(playerTile: Area3D, unitType: int):
 	if openList.size() > 0:
 		for openedTile in openList:
 			tileDictionary[openedTile]._returnTileState()
@@ -63,8 +63,12 @@ func _FindTilesInRange(playerTile: Area3D):
 	openList.append(tileCoodinate)
 # Now retrieve all tile positions surrounding the selected tile, as long as those coordinates are within the grid's dimensions.
 # I will do this using a calculation to see if the distance between tiles is within the range of player movement
+	var movementRange : int
+	match unitType:
+		1: movementRange = playerMovement
+		2: movementRange = enemyMovement
 	for tilePos in tileDictionary:
-		if tilePos.distance_to(tileCoodinate) > 0 and  tilePos.distance_to(tileCoodinate) <= playerMovement:
+		if tilePos.distance_to(tileCoodinate) > 0 and  tilePos.distance_to(tileCoodinate) <= movementRange:
 			openList.append(tilePos)
 	# Make all tiles in the open list display on the map so players can see
 	for openedTile in openList:

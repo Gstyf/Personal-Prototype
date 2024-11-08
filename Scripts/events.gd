@@ -1,7 +1,7 @@
 extends Node
 
 signal tileWasClicked(Area3D) 		# returns the Area3D node that was clicked as a reference
-signal playerTileWasClicked(Area3D) # returns the Area3D node that was clicked as a reference
+signal unitTileWasClicked(Area3D, int) # returns the Area3D node that was clicked as a reference
 signal playerCharacterWasClicked()
 
 

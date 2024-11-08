@@ -14,8 +14,11 @@ radius = 0.826385
 [node name="BoxEnemy" type="PathFollow3D"]
 
 [node name="Enemy" type="CharacterBody3D" parent="." groups=["Enemy"]]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_ota8g")
-SPEED = 10
+SPEED = 12
+HEALTH = 8
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Enemy"]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)

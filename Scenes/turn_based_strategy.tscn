@@ -13,7 +13,7 @@ script = ExtResource("1_k8aal")
 gridWidth = 14
 gridDepth = 10
 playerMovement = 2
-enemyMovement = 2
+enemyMovement = 1
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.89749, 0.29335, -0.32933, 0.43965, -0.53592, 0.720761, 0.0349409, -0.791665, -0.609954, -10.9487, 6.37717, 0.109449)
@@ -25,6 +25,25 @@ current = true
 size = 31.7675
 near = 0.01
 far = 275.52
+
+[node name="Label3D" type="Label3D" parent="TBSCamera"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.73122, 3.75, -5)
+pixel_size = 0.01
+text = "Tile-Based Strategy Prototype"
+font_size = 24
+horizontal_alignment = 2
+vertical_alignment = 0
+
+[node name="Label3D2" type="Label3D" parent="TBSCamera"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.70255, 3.32379, -5)
+pixel_size = 0.01
+text = "Controls:
+Reset Prototype = Escape Key
+Display Movement  = Left-Click Tile*
+*click tile under unit"
+font_size = 24
+horizontal_alignment = 2
+vertical_alignment = 0
 
 [node name="UnitManager" type="Node3D" parent="."]
 script = ExtResource("5_o5d02")

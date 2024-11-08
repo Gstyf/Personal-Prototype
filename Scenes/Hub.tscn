@@ -15,13 +15,34 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.327397, 3.41062, -0.101601)
 unique_name_in_owner = true
 transform = Transform3D(-4.37114e-08, -0.563411, 0.826177, 0, 0.826177, 0.563411, -1, 2.46275e-08, -3.61133e-08, 6.29454, 4.47618, -2.75143e-07)
 
+[node name="Label3D" type="Label3D" parent="CharacterBody3D/HubCamera"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.73122, 3.75, -5)
+pixel_size = 0.01
+text = "Prototype game. Walk up to 'Level Warp Zones' to switch to alternate  game mode."
+font_size = 24
+horizontal_alignment = 2
+vertical_alignment = 0
+
+[node name="Label3D2" type="Label3D" parent="CharacterBody3D/HubCamera"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.70255, 3.32379, -5)
+pixel_size = 0.01
+text = "Controls:
+Reset Prototype = Escape Key
+Movement = WASD Keys
+Activate = E Key"
+font_size = 24
+horizontal_alignment = 2
+vertical_alignment = 0
+
 [node name="Tavern" parent="." instance=ExtResource("2_dagtt")]
 
 [node name="Warp_TD" parent="." instance=ExtResource("3_4tour")]
 transform = Transform3D(-0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258819, -7.774, 1, 6.261)
+textInBox = "Warp to Tower Defence"
 
 [node name="Warp_TBS" parent="." instance=ExtResource("3_4tour")]
 transform = Transform3D(0.135007, 0, 0.990845, 0, 1, 0, -0.990845, 0, 0.135007, -6.533, 1, -4.78)
+textInBox = "Warp to Tile-Based Strategy"
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.959052, 0.204321, 0.196142, -0.177199, -0.107393, 0.978298, 0.220951, -0.972995, -0.0667897, 0, 11.8847, -0.197132)

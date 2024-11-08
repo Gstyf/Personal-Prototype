@@ -53,6 +53,15 @@ func HandleHubSceneSelection(event: InputEvent) -> void: #this might not be the 
 				print("loading TBS level!")
 			SceneToLoad.RTS:
 				pass
+	if event.is_action_pressed("EscapeKey"):
+		activeNode.visible = false
+		activeNode.process_mode = Node.NOTIFICATION_DISABLED
+		activeNode.get_tree().reload_current_scene()
+		activeNode = hub
+		activeNode.visible = true
+		activeNode.process_mode = Node.PROCESS_MODE_INHERIT
+		main_camera = hub.ReturnCamera()
+		main_camera.make_current()
 
 func _on_hub_warp_to_this_zone(NextZone: SceneToLoad) -> void:
 	nextZone = NextZone

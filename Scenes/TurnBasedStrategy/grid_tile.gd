@@ -64,7 +64,7 @@ func _on_body_exited(body: Node3D) -> void: #update the tile to reflect it has n
 		state = currentState.EMPTY
 
 func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
-	if Input.is_action_just_pressed("leftClick") and state != currentState.PLAYER: 
+	if Input.is_action_just_pressed("leftClick") and (state == currentState.EMPTY or state == currentState.INRANGE): 
 		Events.emit_signal("tileWasClicked", self)
-	elif Input.is_action_just_pressed("leftClick") and state == currentState.PLAYER:
-		Events.emit_signal("playerTileWasClicked", self)
+	elif Input.is_action_just_pressed("leftClick") and (state == currentState.PLAYER or state == currentState.ENEMY):
+		Events.emit_signal("unitTileWasClicked", self, state)
